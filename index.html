@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3078552ef7.js" crossorigin="anonymous"></script>
+    <style>
+        @keyframes bounceAnimation {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(-10px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .bouncing-icon {
+            animation: bounceAnimation 0.65s infinite;
+            color: red;
+            font-size: 20px;
+            margin-left: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/J2.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#portfolio">Portfolio&nbsp;<i
+                                class="fa-solid fa-hand-point-left bouncing-icon"></i></a>
+                    </li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>~A CSE Student's Portfolio~</p>
+                <h1>Hi, I'm <span>Jerusha</span><br>From the University of Michigan, Ann Arbor</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------portfolio----------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/DTE.webp">
+                    <div class="layer">
+                        <h3>Data Analyst Intern</h3>
+                        <p>Used Microsoft platforms to develop organizational apps and analytical dashboards</p>
+                        <a href="dte.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="img/DMA.png">
+                    <div class="layer">
+                        <h3>Youth President</h3>
+                        <p>Motivated youth to participate in programs, educational events, and philanthropy</p>
+                        <a href="dma.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="img/C.png">
+                    <div class="layer">
+                        <h3>Curl-Diaries</h3>
+                        <p>Promoting curly hair embracement with a blog on Github, and a TikTok presence</p>
+                        <a href="cd.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="img/Moran.png">
+                    <div class="layer">
+                        <h3>Cyber Security Intern</h3>
+                        <p>Working with members of GRC and leading firm's Security Awareness Month campaign</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!------<a href="#" class="btn">See More</a>----->
+
+            </div>
+        </div>
+        <!-----------about------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="img/side.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About</h1>
+                        <p>Hi! I coded this portfolio using HTML, CSS and JS to showcase my work, personal projects, and
+                            leadership experiences.
+                            I'll
+                            go over my achievements in DTE Energy, Plante Moran, DMA, Curl-Diaries, and more!
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Microsoft Platforms: Power BI, PowerApps</span><br>Developed PowerBI
+                                    Dashboards
+                                    and PowerApp Apps</li>
+                                <li><span>SOC 2 Type 2</span><br>Filled out document request lists, enhancing security
+                                    practices
+                                </li>
+                                <li><span>Content Creation</span><br>Created successful Tiktok and Blog</li>
+                                <li><span>Leadership</span><br>DMA's Youth
+                                    President</li>
+                                <li><span>C++/C</span><br>Classes: ENGR 101, EECS 280</li>
+                                <li><span>HTML, CS, JS</span><br>Projects: portfolio</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>June – Aug 2023</span><br>Data Analyst Intern</li>
+                                <li><span>June – Aug 2022</span><br>Cyber Security Intern
+                                </li>
+                                <li><span>June 2023– Present</span><br>Content Creator</li>
+                                <li><span>Jan – Dec 2022</span><br>DMA's Youth
+                                    President</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>University of Michigan, Ann Arbor</span><br>-Bachelor of Science
+                                    Engineering,CS (Expected May 2026)<br>-Relevant Courses: Data Structures and
+                                    Algorithms
+                                    (starting fall),
+                                    Foundations of Computer Science (starting winter),
+                                    Programming & Intro Data Structures, Discrete Mathematics, Calculus I and II</li>
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------services--------------->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="service-list">
+                    <div>
+                        <i class="fa-brands fa-microsoft"></i>
+                        <h2>Microsoft Platform Development</h2>
+                        <p>Microsoft Platform Development leverages Microsoft platforms and technologies like .NET,
+                            Azure,
+                            SharePoint, PowerApps,
+                            to design and develop customized software solutions. This service covers the entire software
+                            development life cycle,
+                            delivering scalable applications tailored to meet unique business requirements.
+                        </p>
+                        <!-----<a href="#">Learn More</a>---->
+                    </div>
+
+
+
+
+                    <div>
+                        <i class="fa-solid fa-list-check"></i>
+                        <h2>Campaign Management</h2>
+                        <p>Campaign Management involves strategic planning, content creation, channel selection, and
+                            performance monitoring for
+                            marketing campaigns. This comprehensive service drives desired actions and achieves
+                            successful
+                            campaign outcomes through
+                            effective coordination and execution.</p>
+                        <!-----<a href="#">Learn More</a>---->
+                    </div>
+
+
+
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Development</h2>
+                        <p>Web Development is a service that creates visually appealing websites and web applications
+                            using
+                            programming languages,
+                            frameworks, and tools. Skilled developers ensure user-friendly and optimized websites that
+                            meet
+                            specific needs and
+                            achieve business objectives.</p>
+                        <!-----<a href="#">Learn More</a>---->
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-------------------------contact------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-regular fa-paper-plane"></i> jerusham55@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> 1+(248)-986-8701</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/jerusha-manoj-ba830023b/"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Jerusha-Manoj"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://jerusha-manoj.github.io/curlyhairblog/"><i
+                                    class="fa-solid fa-star"></i></a>
+                            <a href="https://www.tiktok.com/@_curl_diaries_"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                        <a href="img/Jerusha_Manoj_2023_Resume.pdf" download class="btn btn2">Download Resume</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="You Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="sumbit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script>
+            function openPost(event) {
+                event.preventDefault();
+                window.open(event.currentTarget.parentElement.href, '_blank');
+            }
+        </script>
+
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu() {
+                sidemenu.style.right = "0";
+            }
+            function closemenu() {
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwZYsVhET1XKa2_XdFvXct16rclEwvZ6iv8bOxaK2jmunOwU9SmcpmVoKV8P5Cc2s-0/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        msg.innerHTML = "Message Sent!"
+                        setTimeout(function () {
+                            msg.innerHTML = ""
+                        }, 5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+
+
+
+
+</body>
+
+</html>
