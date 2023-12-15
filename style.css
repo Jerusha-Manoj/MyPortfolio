@@ -413,11 +413,11 @@ nav .fas {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url(img/iphone.png);
+        background-image: url(img/_A CSE Student’s Portfolio~.png);
     }
 
-    /*.header-text {
-        margin-top: 50%;
+    .header-text {
+        margin-top: 100%;
         font-size: 18px;
         white-space: nowrap;
         position: relative;
@@ -426,7 +426,7 @@ nav .fas {
 
     .header-text h1 {
         font-size: 10px;
-    }*/
+    }
 
     nav .fas {
         display: block;
