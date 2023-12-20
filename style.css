@@ -450,6 +450,7 @@ nav .fas {
     nav ul li {
         display: block;
         margin: 25px;
+        color: white;
     }
 
     nav ul .fas {
