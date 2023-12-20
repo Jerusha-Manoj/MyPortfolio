@@ -450,6 +450,7 @@ nav .fas {
     nav ul li {
         display: block;
         margin: 25px;
+        color: white;
     }
 
     nav ul .fas {
@@ -457,6 +458,7 @@ nav .fas {
         top: 25px;
         left: 25px;
         cursor: pointer;
+        color: white;
     }
 
     .sub-title {
