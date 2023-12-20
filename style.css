@@ -452,6 +452,9 @@ nav .fas {
         margin: 25px;
         color: white;
     }
+    nav ul li a {
+        color: white;
+    }
 
     nav ul .fas {
         position: absolute;
