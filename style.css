@@ -429,7 +429,23 @@ nav .fas {
         display: none;
 /*         font-size: 10px; */
     }
+    .headshot-mobile {
+        width: 100px; /* Adjust as per your preference */
+        height: auto;
+        border-radius: 50%; /* Circular headshot */
+        display: block;
+        margin: 10px auto; /* Center the image */
+        animation: levitate 2s ease-in-out infinite;
+    }
 
+    @keyframes levitate {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px); /* Adjust the levitation height */
+        }
+    }
     nav .fas {
         display: block;
         font-size: 25px;
