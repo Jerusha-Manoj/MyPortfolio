@@ -444,12 +444,12 @@ nav .fas {
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+        color: white;
     }
 
     nav ul li {
         display: block;
         margin: 25px;
-        color: white;
     }
 
     nav ul .fas {
