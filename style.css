@@ -451,7 +451,7 @@ nav .fas {
 
     /* If the typing effect text is not wrapping as expected, ensure its container allows for wrapping */
     .typing-text {
-        white-space: pre-wrap; /* Allows the text to wrap and respects white-space */
+        white-space: normal; /* Allows the text to wrap and respects white-space */
     }
   
     nav .fas {
