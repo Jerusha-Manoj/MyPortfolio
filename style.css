@@ -452,7 +452,8 @@ nav .fas {
     color: black; /* Text color */
     overflow: hidden;
     white-space: nowrap;
-    border-right: .15em solid #FFAA9A; /* Cursor color */
+    font-size: 20px; /* Adjust font size for smaller screens */
+    border-right: .05em solid #FFAA9A; /* Cursor color */
     animation: typing 4s steps(40, end) infinite; /* Apply typing animation */
   }
     nav .fas {
