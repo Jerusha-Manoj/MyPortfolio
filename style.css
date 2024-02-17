@@ -452,7 +452,7 @@ nav .fas {
   .header-text h1::after {
     /* Add a line break after "Hi, I'm" */
     content: '\A';
-    white-space: pre;
+    white-space: pre;}
   
     nav .fas {
         display: block;
