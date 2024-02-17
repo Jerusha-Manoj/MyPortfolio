@@ -313,18 +313,21 @@
 // Function to animate typing effect
 function typeEffect(text, element, delay) {
   let index = 0;
+  let lineBreakAdded = false;
   function addLetter() {
     if (index < text.length) {
-      // Check if it's the end of "From the"
-      if (text.charAt(index) === ' ') {
+      if (text.charAt(index) === ' ' && !lineBreakAdded) {
         element.innerHTML += '<br>'; // Add line break
+        lineBreakAdded = true;
+      } else {
+        element.innerHTML += text.charAt(index);
       }
-      element.innerHTML += text.charAt(index);
       index++;
       setTimeout(addLetter, delay);
     } else {
       // Reset the index to start over
       index = 0;
+      lineBreakAdded = false;
       // Clear the content of the element
       element.textContent = '';
       // Start typing again after a brief delay
