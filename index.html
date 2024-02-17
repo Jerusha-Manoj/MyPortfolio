@@ -328,10 +328,16 @@ function typeEffect(text, element, delay) {
       // Reset the index to start over
       index = 0;
       lineBreakAdded = false;
-      // Clear the content of the element
-      element.textContent = '';
-      // Start typing again after a brief delay
-      setTimeout(addLetter, delay * 5); // Add delay before starting over
+      // If it's the first time typing, wait 3 seconds before starting over
+      if (!element.dataset.firstTime) {
+        element.dataset.firstTime = true;
+        setTimeout(addLetter, 3000);
+      } else {
+        // Clear the content of the element
+        element.textContent = '';
+        // Start typing again after a brief delay
+        setTimeout(addLetter, delay * 5); // Add delay before starting over
+      }
     }
   }
   addLetter();
