@@ -439,22 +439,12 @@ nav .fas {
     #header {
         background-image: url(img/iphone.gif);
     }
-/* Define typing animation */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
+    
   .header-text h1 {
     color: black; /* Text color */
     overflow: hidden;
     white-space: nowrap;
-    font-size: 20px; /* Adjust font size for smaller screens */
-    border-right: .05em solid #FFAA9A; /* Cursor color */
-    animation: typing 4s steps(40, end) infinite; /* Apply typing animation */
+    font-size: 50px; /* Adjust font size for smaller screens */
   }
     nav .fas {
         display: block;
