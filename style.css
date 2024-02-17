@@ -443,6 +443,7 @@ nav .fas {
   .header-text h1 {
     color: black; /* Text color */
     overflow: hidden;
+    white-space: pre-wrap; 
     font-size: 30px; /* Adjust font size for smaller screens */
   }
   
