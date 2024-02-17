@@ -333,10 +333,11 @@
       // Reset the index to start over
       index = 0;
       lineBreakAdded = false;
-      // Clear the content of the element
-      element.textContent = '';
       // Start typing again after a brief delay
-      setTimeout(addLetter, delay * 5); // Add delay before starting over
+      setTimeout(function() {
+        element.textContent = ''; // Clear the content
+        setTimeout(addLetter, delay); // Start typing again
+      }, 3000); // Wait 3 seconds before starting over
     }
   }
   addLetter();
