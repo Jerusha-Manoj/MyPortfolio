@@ -444,8 +444,16 @@ nav .fas {
     color: black; /* Text color */
     overflow: hidden;
     white-space: nowrap;
-    font-size: 50px; /* Adjust font size for smaller screens */
+    font-size: 30px; /* Adjust font size for smaller screens */
+    border-right: .05em solid #FFAA9A; /* Cursor color */
+    animation: typing 4s steps(40, end) forwards; /* Apply typing animation */
   }
+
+  .header-text h1::after {
+    /* Add a line break after "Hi, I'm" */
+    content: '\A';
+    white-space: pre;
+  
     nav .fas {
         display: block;
         font-size: 25px;
