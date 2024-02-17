@@ -439,6 +439,9 @@ nav .fas {
     #header {
         background-image: url(img/iphone.gif);
     }
+    .header-text {
+        padding: 0 20px; /* Add padding to ensure text does not touch the edges */
+    }
     
  .header-text h1 {
         font-size: 40px; /* Adjusted for better readability on small screens */
