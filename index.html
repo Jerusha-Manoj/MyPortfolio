@@ -313,31 +313,11 @@
 // Function to animate typing effect
 function typeEffect(text, element, delay) {
   let index = 0;
-  let lineBreakAdded = false;
   function addLetter() {
     if (index < text.length) {
-      if (text.charAt(index) === ' ' && !lineBreakAdded) {
-        element.innerHTML += '<br>'; // Add line break
-        lineBreakAdded = true;
-      } else {
-        element.innerHTML += text.charAt(index);
-      }
+      element.innerHTML += text.charAt(index);
       index++;
       setTimeout(addLetter, delay);
-    } else {
-      // Reset the index to start over
-      index = 0;
-      lineBreakAdded = false;
-      // If it's the first time typing, wait 3 seconds before starting over
-      if (!element.dataset.firstTime) {
-        element.dataset.firstTime = true;
-        setTimeout(addLetter, 3000);
-      } else {
-        // Clear the content of the element
-        element.textContent = '';
-        // Start typing again after a brief delay
-        setTimeout(addLetter, delay * 5); // Add delay before starting over
-      }
     }
   }
   addLetter();
@@ -348,6 +328,12 @@ const text = "From the University of Michigan";
 const element = document.querySelector(".typing-text");
 const delay = 100; // Adjust delay as needed
 typeEffect(text, element, delay);
+
+// After typing the text once, start over after a delay
+setTimeout(function() {
+  element.textContent = ''; // Clear the text
+  typeEffect(text, element, delay); // Start typing again
+}, 2000); // Wait 2 seconds before starting over
 </script>
 
 
