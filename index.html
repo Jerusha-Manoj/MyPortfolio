@@ -34,7 +34,7 @@
             margin-left: 12px;
         }
     </style>
-    <style>
+<style>
 /* Define typing animation */
 @keyframes typing {
   0% {
@@ -51,7 +51,7 @@
   overflow: hidden;
   white-space: nowrap;
   border-right: .15em solid #FFAA9A; /* Cursor color */
-  animation: typing 4s steps(40, end) infinite; /* Infinite animation */
+  animation: typing 4s steps(40, end) forwards; /* Animation fills the text and stops */
 }
 </style>
 </head>
@@ -311,29 +311,36 @@
         
 <script>
 // Function to animate typing effect
-function typeEffect(text, element, delay) {
+(function() {
+  const text = "From the University of Michigan";
+  const element = document.querySelector(".typing-text");
+  const delay = 100; // Adjust delay as needed
+
   let index = 0;
+  let lineBreakAdded = false;
+
   function addLetter() {
     if (index < text.length) {
-      element.innerHTML += text.charAt(index);
+      if (text.charAt(index) === ' ' && !lineBreakAdded) {
+        element.innerHTML += '<br>'; // Add line break
+        lineBreakAdded = true;
+      } else {
+        element.innerHTML += text.charAt(index);
+      }
       index++;
       setTimeout(addLetter, delay);
+    } else {
+      // Reset the index to start over
+      index = 0;
+      lineBreakAdded = false;
+      // Clear the content of the element
+      element.textContent = '';
+      // Start typing again after a brief delay
+      setTimeout(addLetter, delay * 5); // Add delay before starting over
     }
   }
   addLetter();
-}
-
-// Call the typing effect function with desired text and delay
-const text = "From the University of Michigan";
-const element = document.querySelector(".typing-text");
-const delay = 100; // Adjust delay as needed
-typeEffect(text, element, delay);
-
-// After typing the text once, start over after a delay
-setTimeout(function() {
-  element.textContent = ''; // Clear the text
-  typeEffect(text, element, delay); // Start typing again
-}, 2000); // Wait 2 seconds before starting over
+})();
 </script>
 
 
