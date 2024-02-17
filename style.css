@@ -19,7 +19,7 @@ body {
     height: 100vh;
     background-image: url(img/Jerusha_Home.gif);
     background-size: cover;
-    padding-top: 25px;
+    padding-top: 40px;
     background-position: center;
 }
 
@@ -441,7 +441,7 @@ nav .fas {
     }
     .header-text {
         padding: 0 20px; /* Add padding to ensure text does not touch the edges */
-        margin-top: 50px;
+        margin-top: 60px;
     }
     .header-text p {
     white-space: nowrap;
