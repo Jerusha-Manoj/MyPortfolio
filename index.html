@@ -34,6 +34,25 @@
             margin-left: 12px;
         }
     </style>
+    <style>
+/* Define typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Apply typing animation to the typing-text class */
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid orange;
+  animation: typing 4s steps(40, end);
+}
+</style>
 </head>
 
 
@@ -44,30 +63,24 @@
 
 <!---------------------------------- Navigation bar ---------------------------------->
     <div id="header">
-        <div class="container">
-            <nav>
-                <img src="img/J2.png" class="logo">
-                
-<!--ul are for lists -->
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#portfolio">Portfolio&nbsp;<i
-                                class="fa-solid fa-hand-point-left bouncing-icon"></i></a>
-                    </li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-
-                
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>My Personal Portfolio</p>
-                <h1>Hi, I'm <span>Jerusha</span><br>From the <br>University of Michigan</h1>
-            </div>
-        </div>
+  <div class="container">
+    <nav>
+      <img src="img/J2.png" class="logo">
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#portfolio">Portfolio&nbsp;<i class="fa-solid fa-hand-point-left bouncing-icon"></i></a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fas fa-times" onclick="closemenu()"></i>
+      </ul>
+      <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+      <p>My Personal Portfolio</p>
+      <h1>Hi, I'm <span>Jerusha</span><br><span class="typing-text"></span></h1>
     </div>
+  </div>
+</div>
 
     <!-----------------portfolio----------->
     <div id="portfolio">
@@ -294,7 +307,27 @@
                     .catch(error => console.error('Error!', error.message))
             })
         </script>
+        
+<script>
+// Function to animate typing effect
+function typeEffect(text, element, delay) {
+  let index = 0;
+  function addLetter() {
+    if (index < text.length) {
+      element.textContent += text.charAt(index);
+      index++;
+      setTimeout(addLetter, delay);
+    }
+  }
+  addLetter();
+}
 
+// Call the typing effect function with desired text and delay
+const text = "From the University of Michigan";
+const element = document.querySelector(".typing-text");
+const delay = 100; // Adjust delay as needed
+typeEffect(text, element, delay);
+</script>
 
 
 
