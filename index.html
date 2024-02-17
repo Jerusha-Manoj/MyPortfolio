@@ -49,7 +49,7 @@
 .typing-text {
   color: black; /* Text color */
   overflow: hidden;
-  white-space: nowrap;
+  white-space: pre-wrap;
   border-right: .15em solid #FFAA9A; /* Cursor color */
   animation: typing 4s steps(40, end) forwards; /* Animation fills the text and stops */
 }
@@ -310,34 +310,24 @@
         </script>
         
 <script>
-// Function to animate typing effect
 (function() {
   const text = "From the University of Michigan!";
   const element = document.querySelector(".typing-text");
   const delay = 100; // Adjust delay as needed
+  const startDelay = 1000; // Delay before starting over
 
   let index = 0;
-  let lineBreakAdded = false;
 
   function addLetter() {
     if (index < text.length) {
-      if (text.charAt(index) === ' ' && !lineBreakAdded) {
-        element.innerHTML += '<br>'; // Add line break
-        lineBreakAdded = true;
-      } else {
-        element.innerHTML += text.charAt(index);
-      }
+      element.innerHTML += text.charAt(index);
       index++;
       setTimeout(addLetter, delay);
     } else {
-      // Reset the index to start over
+      // Reset index after completing the text
       index = 0;
-      lineBreakAdded = false;
-      // Start typing again after a brief delay
-      setTimeout(function() {
-        element.textContent = ''; // Clear the content
-        setTimeout(addLetter, delay); // Start typing again
-      }, 1000); // Wait 3 seconds before starting over
+      // Start over after the start delay
+      setTimeout(addLetter, startDelay);
     }
   }
   addLetter();
