@@ -437,22 +437,24 @@ nav .fas {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url(img/jerushaiphone.png);
+        background-image: url(img/iphone.gif);
     }
-
-    .header-text {
-/*         margin-top: 50%;
-        font-size: 18px;
-        white-space: nowrap;
-        position: relative;
-        left: 5px; */
-        display: none;
-    }
-
-    .header-text h1 {
-        display: none;
-/*         font-size: 10px; */
-    }
+/* Define typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+  .header-text h1 {
+    color: black; /* Text color */
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #FFAA9A; /* Cursor color */
+    animation: typing 4s steps(40, end) infinite; /* Apply typing animation */
+  }
     nav .fas {
         display: block;
         font-size: 25px;
