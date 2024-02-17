@@ -63,7 +63,7 @@
 <!-- id identfies elements in the html, classes are used to group elements to add style to them -->
 
 <!---------------------------------- Navigation bar ---------------------------------->
-    <div id="header">
+<div id="header">
   <div class="container">
     <nav>
       <img src="img/J2.png" class="logo">
@@ -78,7 +78,7 @@
     </nav>
     <div class="header-text">
       <p>My Personal Portfolio</p>
-      <h1>Hi, I'm <span>Jerusha</span><br><span class="typing-text"></span></h1>
+      <h1>Hi, I'm <span>Jerusha</span><br><span class="typing-text"></span></h1> <!-- Added <br> here -->
     </div>
   </div>
 </div>
@@ -315,7 +315,11 @@ function typeEffect(text, element, delay) {
   let index = 0;
   function addLetter() {
     if (index < text.length) {
-      element.innerHTML += text.charAt(index); // Use innerHTML to insert <br> as HTML
+      // Check if it's the end of "From the"
+      if (text.charAt(index) === ' ') {
+        element.innerHTML += '<br>'; // Add line break
+      }
+      element.innerHTML += text.charAt(index);
       index++;
       setTimeout(addLetter, delay);
     } else {
@@ -331,7 +335,7 @@ function typeEffect(text, element, delay) {
 }
 
 // Call the typing effect function with desired text and delay
-const text = "From the<br>University of Michigan"; // Added <br> here
+const text = "From the University of Michigan";
 const element = document.querySelector(".typing-text");
 const delay = 100; // Adjust delay as needed
 typeEffect(text, element, delay);
