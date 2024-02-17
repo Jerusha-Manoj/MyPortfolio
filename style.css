@@ -441,6 +441,7 @@ nav .fas {
     }
     .header-text {
         padding: 0 20px; /* Add padding to ensure text does not touch the edges */
+        margin-top: 50px;
     }
     .header-text p {
     white-space: nowrap;
