@@ -449,7 +449,7 @@ nav .fas {
  .header-text h1 {
         font-size: 35px; /* Adjusted for better readability on small screens */
         line-height: 1.3; /* Improves spacing between lines */
-        white-space: normal; /* Allows text to wrap */
+        white-space: nowrap; /* Allows text to wrap */
     }
 
     /* If the typing effect text is not wrapping as expected, ensure its container allows for wrapping */
