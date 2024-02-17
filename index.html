@@ -314,9 +314,9 @@
   const text = "From the University of Michigan!";
   const element = document.querySelector(".typing-text");
   const delay = 100; // Adjust delay as needed
+  const loopDelay = 1000; // Delay before starting over
 
   let index = 0;
-  let firstRun = true;
 
   function addLetter() {
     if (index < text.length) {
@@ -324,19 +324,17 @@
       index++;
       setTimeout(addLetter, delay);
     } else {
-      if (firstRun) {
-        firstRun = false;
-        setTimeout(function() {
-          index = 0;
-          element.textContent = ''; // Clear the content
-          addLetter(); // Start typing again
-        }, 1000); // Wait 1 second before starting over
-      }
+      setTimeout(function() {
+        index = 0;
+        element.textContent = ''; // Clear the content
+        addLetter(); // Start typing again
+      }, loopDelay);
     }
   }
   addLetter();
 })();
 </script>
+
 
 
 
