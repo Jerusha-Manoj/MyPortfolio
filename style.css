@@ -529,6 +529,11 @@ nav .fas {
         background-size: auto 100%; /* Adjust background size to cover the height fully */
         background-position: top center; /* Adjust background position if needed */
     }
+    .header-text {
+        margin-top: 2px;
+        font-size: 10px;
+        white-space: normal;
+    }
 }
 
 #msg {
