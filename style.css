@@ -521,13 +521,13 @@ nav .fas {
     .contact-right {
         flex-basis: 100%;
     }
-
-}
-@media only screen and (orientation: landscape) {
+    @media only screen and (orientation: landscape) {
     
     .header-text h1 {
       display:none;
     }
+}
+
 }
 
 
