@@ -437,8 +437,9 @@ nav .fas {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-position: center 20%; 
+        
         background-image: url(img/iphone.gif);
+        background-position: center 40%; 
     }
     .header-text {
         padding: 0 20px; /* Add padding to ensure text does not touch the edges */
