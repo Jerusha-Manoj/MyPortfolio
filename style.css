@@ -525,20 +525,21 @@ nav .fas {
 }
 @media only screen and (orientation: landscape) {
     #header {
-        height: 60vh; /* Adjust the height to better fit landscape mode */
-        background-size: auto 100%; /* Adjust background size to cover the height fully */
-        background-position: top center; /* Adjust background position if needed */
+        height: 60vh; /* Adjust if necessary to ensure it doesn't push content down */
+        background-size: auto 100%; /* Keeps background size to cover the height fully */
+        background-position: top center; /* Ensures background is positioned as desired */
     }
-    .header-text h1{
-        margin-top: 2px;
-        padding: 5 0px;
-        font-size: 10px;
+    .header-text h1 {
+        margin-top: 0; /* Reduced to 0 to bring closer to the top */
+        padding: 0px; /* Adjusted to potentially remove extra space */
+        font-size: 10px; /* Adjust if necessary for visibility */
         white-space: normal;
     }
-    .header-text p{
-        display:none;
+    .header-text p {
+        display: none;
     }
 }
+
 
 #msg {
     color: white;
